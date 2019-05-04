@@ -3,8 +3,8 @@ package Users.Workers;
 import Users.Worker;
 
 public class Сashier extends Worker implements IWork {
-    public Сashier(String fullname, String sex, String position, String secretCode) {
-        super(fullname, sex, position, secretCode);
+    public Сashier(String fullname, String sex) {
+        super(fullname, sex, "cashier");
     }
 
     @Override

@@ -1,4 +1,7 @@
-import Proxy.DepartmentStaff;
+
+import Strategy.CustomerStrategy;
+import Strategy.UserStrategy;
+import Strategy.WorkerStrategy;
 import Users.User;
 import Data.Workers;
 
@@ -10,7 +13,8 @@ public class StartForm extends JFrame {
     private JButton CustomerBtn;
     private JPanel StartPanel;
 
-    private DepartmentStaff departmentStaff = new DepartmentStaff();
+    private Workers workers = new Workers();
+    private UserStrategy strategy = new UserStrategy();
 
     private User currentUser;
 
@@ -23,19 +27,19 @@ public class StartForm extends JFrame {
 
         WorkerBtn.addActionListener(e -> {
 
-            JFrame frame= new JFrame("Checking secret code");
+            JFrame frame = new JFrame("Checking secret code");
             String secretCode = JOptionPane.showInputDialog(
                     frame,
                     "Enter secret code",
                     "Secret code needed",
                     JOptionPane.QUESTION_MESSAGE);
 
-            //PROXY
-            boolean permission = departmentStaff.getPermission(secretCode);
+            boolean permission = workers.isWorker(secretCode);
+
 
             if (permission) {
 
-                this.currentUser = departmentStaff.getWorker(secretCode);
+                this.currentUser = workers.getWorker(secretCode);
 
                 JOptionPane.showMessageDialog(
                         new Frame("Successful login to the system"),
@@ -43,19 +47,28 @@ public class StartForm extends JFrame {
                         "Login to the system",
                         JOptionPane.INFORMATION_MESSAGE);
 
-                setVisible(false);
-                //open worker frame
 
-            } else JOptionPane.showMessageDialog(
-                    new Frame("Failed login"),
-                    "Permission denied",
-                    "Unsuccessful login to the system",
-                    JOptionPane.ERROR_MESSAGE);
+                //open worker frame by strategy
+                strategy.setFormChooser(new WorkerStrategy());
+
+            } else {
+                JOptionPane.showMessageDialog(
+
+                        new Frame("Failed login"),
+                        "Permission denied",
+                        "Unsuccessful login to the system",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+            setVisible(false);
+            strategy.openNextForm();
         });
 
         CustomerBtn.addActionListener(e -> {
             setVisible(false);
-            //open customer frame
+
+            //open customer frame by strategy and open it
+            strategy.setFormChooser(new CustomerStrategy());
+            strategy.openNextForm();
         });
     }
 
