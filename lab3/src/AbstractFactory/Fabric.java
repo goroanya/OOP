@@ -19,7 +19,7 @@ public class Fabric implements CountryFactory {
     protected Fabric() {
     }
 
-    public static Fabric getInstance() {
+    public static synchronized Fabric getInstance() {
         if (fabric == null){
             fabric = new Fabric();
         }

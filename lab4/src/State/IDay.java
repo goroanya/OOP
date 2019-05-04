@@ -1,6 +1,6 @@
 package State;
 
 public interface IDay {
-    void takeMorningGrugs();
-    void takeEveningGrugs();
+    void takeMorningDrugs();
+    void takeEveningDrugs();
 }

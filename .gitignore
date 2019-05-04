@@ -26,3 +26,6 @@ hs_err_pid*
 .idea/
 *.iml
 out/
+/СorseWork_NetBeans/nbproject/private/
+/СorseWork_NetBeans/build/
+/СorseWork_NetBeans/dist/

@@ -17,8 +17,8 @@ public class Patient {
         else setDay(new Monday());
     }
     public void takeDrugs(){
-        day.takeMorningGrugs();
-        day.takeEveningGrugs();
+        day.takeMorningDrugs();
+        day.takeEveningDrugs();
     }
 
 }
