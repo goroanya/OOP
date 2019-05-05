@@ -1,8 +1,6 @@
-
 package DB;
 import Users.*;
 import java.util.HashMap;
-
 
 public class UsersDataBase {
     static HashMap<String,User> users = new HashMap<>();

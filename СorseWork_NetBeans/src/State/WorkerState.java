@@ -9,5 +9,4 @@ public class WorkerState implements State {
         SW.setVisible(false);
         SW.openWorkerUI();
     }
-
 }

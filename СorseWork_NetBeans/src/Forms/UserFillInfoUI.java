@@ -46,21 +46,11 @@ public class UserFillInfoUI extends javax.swing.JFrame {
         FullnameField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         AgeField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        AgeField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AgeFieldActionPerformed(evt);
-            }
-        });
 
         sexGroup.add(MaleRadio);
         MaleRadio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         MaleRadio.setSelected(true);
         MaleRadio.setText("male");
-        MaleRadio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MaleRadioActionPerformed(evt);
-            }
-        });
 
         sexGroup.add(FemaleRadio);
         FemaleRadio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -135,17 +125,16 @@ public class UserFillInfoUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MaleRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MaleRadioActionPerformed
+    private void MaleRadioActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-    }//GEN-LAST:event_MaleRadioActionPerformed
+    }                                         
+
 
     private void CancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelBtnActionPerformed
         this.dispose();
     }//GEN-LAST:event_CancelBtnActionPerformed
 
-    private void AgeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgeFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AgeFieldActionPerformed
+
 
     private void OkBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OkBtnActionPerformed
         try {

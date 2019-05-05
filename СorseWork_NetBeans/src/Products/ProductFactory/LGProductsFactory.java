@@ -5,7 +5,7 @@ import Products.*;
 import static Products.Color.*;
 import Users.Worker;
 
-public class LGProductsFactory implements IProductFactory {
+    public class LGProductsFactory implements IProductFactory {
 
     private ProtectedDiscountSystem discountSystem = new ProtectedDiscountSystem();
 

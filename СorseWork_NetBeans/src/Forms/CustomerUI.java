@@ -1531,5 +1531,4 @@ public class CustomerUI extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel welcomeLbl;
     // End of variables declaration//GEN-END:variables
-
 }

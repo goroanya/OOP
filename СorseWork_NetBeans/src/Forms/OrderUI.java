@@ -155,11 +155,6 @@ public class OrderUI extends javax.swing.JFrame {
 
         getDeliveryCheckBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         getDeliveryCheckBox.setText("get delivery");
-        getDeliveryCheckBox.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                getDeliveryCheckBoxStateChanged(evt);
-            }
-        });
         getDeliveryCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 getDeliveryCheckBoxActionPerformed(evt);
@@ -344,9 +339,6 @@ public class OrderUI extends javax.swing.JFrame {
             AirCheckBox.setSelected(false);
         }
     }//GEN-LAST:event_getDeliveryCheckBoxActionPerformed
-
-    private void getDeliveryCheckBoxStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_getDeliveryCheckBoxStateChanged
-    }//GEN-LAST:event_getDeliveryCheckBoxStateChanged
 
     private void RefreshCostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefreshCostActionPerformed
         this.TotalCostLbl.setText("" + (parent.getUser().getAllProductsCost() + delivery.getShippingCost(chooseShippingType())));

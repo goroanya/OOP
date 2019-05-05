@@ -126,9 +126,6 @@
           <Font name="Tahoma" size="18" style="0"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AgeFieldActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="MaleRadio">
       <Properties>
@@ -141,9 +138,6 @@
         <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="male"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MaleRadioActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="FemaleRadio">
       <Properties>

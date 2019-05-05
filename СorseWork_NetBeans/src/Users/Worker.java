@@ -15,7 +15,8 @@ public class Worker extends User {
     public String getPosition() {
         return position;
     }
-    public void setDiscount(Product p, int value){
+
+    public void setDiscount(Product p, int value) {
         p.setDiscount(value);
     }
 

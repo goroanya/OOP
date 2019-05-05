@@ -5,11 +5,9 @@ import java.util.HashMap;
 
 public   class StateFactory {
     static HashMap<UserType,State> states = new HashMap<>();
-    static{
-        
+    static {
         states.put(UserType.CUSTOMER, null);
         states.put(UserType.WORKER, null);
-
     }
     public State getState(UserType type){
         if(states.get(type) == null ){
